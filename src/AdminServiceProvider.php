@@ -23,7 +23,7 @@ class AdminServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__ . '/config.php' => config_path('admin.php')], 'ideiasweb/admin~config');
         $this->publishes([__DIR__ . '/Resources/Views' => resource_path('views/vendor/admin')], 'ideiasweb/admin~views');
-        $this->publishes([__DIR__ . '/Resources/Assets' => resource_path('assets/vendor/admin')], 'ideiasweb/admin~assets');
+        $this->publishes([__DIR__ . '/Resources/Assets' => public_path('assets/vendor/admin')], 'ideiasweb/admin~assets');
         $this->publishes([__DIR__ . '/Resources/Migrations' => database_path('migrations')], 'ideiasweb/admin~migrations');
     }
 

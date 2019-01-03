@@ -2,6 +2,6 @@
 
 return [
 
-    'projeto' => 'Ideiasweb',
+    'projeto' => 'Nome do projeto',
 
 ];
