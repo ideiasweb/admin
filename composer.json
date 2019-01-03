@@ -21,5 +21,12 @@
 		"psr-4": {
 			"Ideiasweb\\Admin\\": "src/"
 		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Ideiasweb\\Admin\\AdminServiceProvider"
+			]
+		}
 	}
 }
