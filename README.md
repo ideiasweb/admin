@@ -2,6 +2,7 @@
 
 #### Instalação
 
+
 1 - Adicione o repositorio no seu arquivo `composer.json`
 
 ~~~~
@@ -22,7 +23,12 @@
 * `php artisan vendor:publish --tag="ideiasweb/admin~config"`
 * `php artisan vendor:publish --tag="ideiasweb/admin~assets"`
 
-4 - Rode o migration:
+4 - Exclua as migrations que vem por padrao no laravel:
+
+`rm -rf database/migrations/*`
+
+
+5 - Rode o migration:
 
 `php artisan migrate`
 
