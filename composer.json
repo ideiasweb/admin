@@ -1,0 +1,24 @@
+{
+	"name": "ideiasweb/admin",
+	"description": "Administrador de sites da agencia ideiasweb",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mauricio Guariero Dias",
+			"email": "mguariero@gmail.com"
+		}
+	],
+	"require": {
+		"php": "^7.0",
+		"illuminate/contracts": "^5.7",
+		"illuminate/http": "^5.7",
+		"illuminate/support": "^5.7",
+		"illuminate/database": "^5.7"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ideiasweb\\Admin\\": "src/"
+		}
+	}
+}
