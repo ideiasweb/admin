@@ -4,12 +4,12 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdmConfigsTable
+class CreateAdmConfigsTable extends Migration
 {
 
     public function up()
     {
-        Schema::table('adm_configs', function (Blueprint $table) {
+        Schema::create('adm_configs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('chave');
             $table->text('valor');
