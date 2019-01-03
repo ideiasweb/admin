@@ -34,8 +34,23 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfig(__DIR__ . '/auth.php', 'auth');
+
         $this->app->singleton('Ideiasweb.Admin.Helper', function () {
             return new AdminHelper;
         });
+    }
+
+    /**
+     * Merge the given configuration with the existing configuration.
+     *
+     * @param $path
+     * @param $key
+     */
+    protected function mergeConfig($path, $key)
+    {
+        $config = $this->app['config']->get($key, []);
+
+        $this->app['config']->set($key, array_merge_recursive(require $path, $config));
     }
 }

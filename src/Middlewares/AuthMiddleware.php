@@ -16,10 +16,10 @@ class AuthMiddleware
      */
     public function handle($request, Closure $next)
     {
-        //if (auth('admin')->check()) {
+        if (auth('admin')->check()) {
             return $next($request);
-        //}
+        }
 
-        //throw new AuthenticationException('Unauthenticated.', ['admin'], route('login'));
+        throw new AuthenticationException('Unauthenticated.', ['admin'], route('admin.login'));
     }
 }
