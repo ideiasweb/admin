@@ -36,6 +36,8 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->mergeConfig(__DIR__ . '/auth.php', 'auth');
 
+        // todo: registrar comando que gera o index.stub dentro da public...
+
         $this->app->singleton('Ideiasweb.Admin.Helper', function () {
             return new AdminHelper;
         });
