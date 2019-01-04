@@ -2,6 +2,8 @@
 
 namespace Ideiasweb\Admin\Controllers;
 
+use Ideiasweb\Admin\Requests\LoginRequest;
+
 class LoginController extends Controller
 {
 
@@ -10,9 +12,9 @@ class LoginController extends Controller
         return view('admin::auth.login');
     }
 
-    function login()
+    function login(LoginRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     function logout()

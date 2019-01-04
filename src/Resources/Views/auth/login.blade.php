@@ -5,11 +5,11 @@
 
 	<form action="{{ route('admin.login.post') }}" method="post">
 		<div class="form-group has-feedback">
-			<input type="text" class="form-control" required placeholder="Usuário ou E-mail">
+			<input type="text" name="email" class="form-control" required placeholder="E-mail">
 			<span class="glyphicon glyphicon-user form-control-feedback"></span>
 		</div>
 		<div class="form-group has-feedback">
-			<input type="password" class="form-control" required placeholder="Senha">
+			<input type="password" name="password" class="form-control" required placeholder="Senha">
 			<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 		</div>
 		<div class="row">
